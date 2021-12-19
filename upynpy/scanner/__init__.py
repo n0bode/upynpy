@@ -1,0 +1,1 @@
+from .upnp_scanner import scan
