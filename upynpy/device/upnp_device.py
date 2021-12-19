@@ -25,6 +25,10 @@ class UpnpDevice:
     def action(self) -> ActionGenerator:
         return ActionGenerator(self, self._device["actions"])
 
+    @property
+    def actions(self) -> list:
+        return self._device["actions"].keys()
+
     def has_action(self, name):
         return name in self._device["actions"]
             

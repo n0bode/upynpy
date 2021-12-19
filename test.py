@@ -1,8 +1,3 @@
-# Upynpy is a simple library to use Upnp devices
-
-## Example
-
-```python
 from upynpy import scan
 from upynpy.errors import UpnpError
 
@@ -12,7 +7,7 @@ for dev in devices:
   print("Found :", dev)
   print("actions avaliables:")
   for ac in dev.actions:
-    print("\t", ac)
+    print(ac)
   print("### END")
   
   if dev.has_action("GetExternalIPAddress"):
@@ -37,4 +32,3 @@ for dev in devices:
     except UpnpError as err:
       print("Something is wrong!!!")
       print(err)
-```
